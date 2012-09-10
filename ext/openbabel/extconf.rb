@@ -27,9 +27,9 @@ begin
   end
   Dir.chdir ob_bindings_dir do
     puts "Compiling and instaling OpenBabel Ruby bindings."
-    `sed -i 's/Init_OpenBabel/Init_openbabel/g' *cpp`
+    #`sed -i 's/Init_OpenBabel/Init_openbabel/g' *cpp`
     require './extconf.rb'
-    `sed -i 's/-flat_namespace//' Makefile`
+    #`sed -i 's/-flat_namespace//' Makefile`
     puts `make`
   end
   FileUtils.cp(ob_bindings_dir+"/openbabel.so", "./")
