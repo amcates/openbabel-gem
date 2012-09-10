@@ -1,7 +1,7 @@
 require 'fileutils'
 require 'tmpdir'
 
-ob_num_ver="2.3.1"
+ob_num_ver="2.2.3"
 ob_ver="openbabel-"+ob_num_ver
 
 main_dir = File.expand_path(File.join(File.dirname(__FILE__),"..","..","src"))
