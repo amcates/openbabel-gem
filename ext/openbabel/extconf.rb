@@ -14,7 +14,7 @@ begin
   Dir.chdir main_dir do
     FileUtils.rm_rf ob_main_dir
     puts "Downloading OpenBabel sources"
-    puts `curl -L -d "https://github.com/downloads/amcates/openbabel-gem/openbabel-2.2.3.tar.gz" | tar xz`
+    puts `curl "https://github.com/downloads/amcates/openbabel-gem/openbabel-2.2.3.tar.gz" | tar xz`
   end
   Dir.chdir ob_main_dir do
     puts "Configuring OpenBabel"
