@@ -19,7 +19,7 @@ begin
   Dir.chdir ob_main_dir do
     puts "Configuring OpenBabel"
     puts `cmake #{ob_main_dir} -DCMAKE_INSTALL_PREFIX=#{lib_dir}`
-    unless File.exists?(`which obabel`.chomp)
+    unless File.exists?(`which babel`.chomp)
       puts "OpenBabel not installed. Compiling sources."
       puts `make`
       puts `make install`
